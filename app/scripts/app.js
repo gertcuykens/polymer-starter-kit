@@ -6,9 +6,32 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
+'use strict';
 
 (function(document) {
-  'use strict';
+
+  // https://www.youtube.com/watch?v=Yr84DpNaMfk
+  // Eric Bidelman magic
+  //   var webComponentsSupported = (
+  //     'registerElement' in document &&
+  //     'import' in document.createElement('link') &&
+  //     'content' in document.createElement('template')
+  //   );
+  // 
+  //   if (!webComponentsSupported) {
+  //     var script = document.createElement('script');
+  //     script.async = true;
+  //     script.src = 'bower_components/webcomponentsjs/webcomponents-lite.js';
+  //     script.onload = finishLazyLoading;
+  //     document.head.appendChild(script);
+  //   } else {
+  //     finishLazyLoading();
+  //   }
+  //   
+  //   function finishLazyLoading() {
+  //     window.Polymer = window.Polymer || {};
+  //     window.Polymer.dom = 'shadow';
+  //   }
 
   // Grab a reference to our auto-binding template
   // and give it some initial binding values
